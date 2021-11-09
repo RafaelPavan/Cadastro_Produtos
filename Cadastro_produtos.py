@@ -37,9 +37,19 @@ def funcao_principal ():
     formulario.lineEdit_3.setText("")
 
 def chama_listar_dados():
-   listar_dados.show()
+    listar_dados.show()
+    cursor = banco.cursor()
+    comando_SQL = "SELECT * FROM produtos"
+    cursor.execute(comando_SQL)
+    dados_lidos = cursor.fetchall()
+    
 
+    listar_dados.tableWidget.setRowCount(len(dados_lidos))
+    listar_dados.tableWidget.setColumnCount(5)
 
+    for i in range(0,len(dados_lidos)):
+        for j in range (0,5):
+            listar_dados.tableWidget.setItem(i,j,QtWidgets.QTableWidgetItem(str(dados_lidos[i][j])))
     
 
 app=QtWidgets.QApplication([])
