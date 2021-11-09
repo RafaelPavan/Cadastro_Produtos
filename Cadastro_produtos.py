@@ -8,6 +8,7 @@ banco = mysql.connector.connect(
 
 
 )
+
 def funcao_principal ():
     linha1 = formulario.lineEdit.text()
     linha2 = formulario.lineEdit_2.text()
@@ -31,12 +32,21 @@ def funcao_principal ():
     dados = (str(linha1),str(linha2), str(linha3),categoria)
     cursor.execute(comando_SQL, dados)
     banco.commit()
+    formulario.lineEdit.setText("")
+    formulario.lineEdit_2.setText("")
+    formulario.lineEdit_3.setText("")
 
- 
+def chama_listar_dados():
+   listar_dados.show()
+
+
+    
 
 app=QtWidgets.QApplication([])
 formulario=uic.loadUi("formulario.ui")
+listar_dados=uic.loadUi("listar_dados.ui")
 formulario.pushButton.clicked.connect(funcao_principal)
+formulario.pushButton_2.clicked.connect(chama_listar_dados)
 
 formulario.show()
 app.exec()

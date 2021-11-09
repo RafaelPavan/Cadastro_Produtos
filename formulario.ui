@@ -272,6 +272,31 @@ background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.5, y2:0.54545
      <string>Enviar</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>510</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.5, y2:0.545455, stop:0 rgba(0, 0, 0, 255), stop:0.539773 rgba(83, 83, 83, 255));
+background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0.5, y2:0.545455, stop:0 rgba(0, 0, 0, 255), stop:0.704545 rgba(83, 83, 83, 255));</string>
+    </property>
+    <property name="text">
+     <string>Listar</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
