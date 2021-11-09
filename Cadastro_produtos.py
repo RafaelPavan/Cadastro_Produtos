@@ -51,3 +51,4 @@ formulario.pushButton_2.clicked.connect(chama_listar_dados)
 formulario.show()
 app.exec()
  
+print('atualizar')
